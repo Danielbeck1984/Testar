@@ -5,11 +5,9 @@
  */
 package testar;
 
-import java.util.Arrays;
-
 /**
  *
- * @author danie
+ * @author daniel
  */
 public class MAIN {
 
@@ -18,33 +16,29 @@ public class MAIN {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int y = 6, x = 0, tY = 0;
-        int[] array = {y};
         
         
+        // skapat en array för att hålla 12 st int värden för att använda den
+        // till övertids tilllägg
+        int array [] = new int[12];
+        // skapa 3 variabler för att hålla värden i
+        int y = 10, ty = 0, x;
+        
+        // x får värdet när man delar 60min med y i detta fallet med 6 då ska 
+        // x få värdet 10
         x = 60 / y;
         
-        for(int i = 8; i <= x;  i++){
+        //array[0] = y;
+        
+        for (int i = 0; i < x; i++){
             
-            
-            tY = tY + y; 
-            array = addElement(array , tY);
-              
-           
+            ty = ty + y;
+            array[i] = ty;
+            System.out.println(array[i]);
         }
-
-
         
         
-        for (int i : array){
-            System.out.println(i);
-        }
-    }
-    
-    static int[] addElement(int[] a, int e) {
-        a  = Arrays.copyOf(a, a.length + 1);
-        a[a.length - 1] = e;
-        return a;
+        
     }
     
 }
